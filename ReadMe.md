@@ -22,3 +22,18 @@ npm install nodemailer
 ```
 node email.js
 ```
+
+## 範例
+- req.body 是要傳送的 mail 網址
+輸入 http://localhost:5000/send
+看到 
+```
+Send success!!!
+```
+表示成功
+看到 
+```
+Send fail!!!
+```
+表示失敗
+
