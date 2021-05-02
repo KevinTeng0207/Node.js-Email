@@ -27,7 +27,12 @@ node email.js
 - 傳送的 mail 網址
 - **要從 req 傳輸**
 輸入 http://localhost:5000/send
-
+```javascript
+    from: mailconfig.Gmail.user, //寄件人
+    to: req.body, //收件人
+    subject: '信件標題',
+    text: '信件內容'
+```
 ```
 Send success!!!
 表示成功
