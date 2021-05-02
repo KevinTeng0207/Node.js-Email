@@ -24,9 +24,8 @@ node email.js
 ```
 
 ## 範例
-- 傳送的 mail 網址
-- **要從 req 傳輸**
-輸入 http://localhost:5000/send
+1. 輸入 http://localhost:5000/send
+2. **收件人要從 req 傳輸**
 ```javascript
     from: mailconfig.Gmail.user, //寄件人
     to: req.body, //收件人
