@@ -22,24 +22,20 @@ app.post('/send', (req, res) => { // '/'是指專案的根目錄路徑
 
     var mailOptions = {
         from: mailconfig.Gmail.user,
-        to: req.body,
+        to: req.body.email,
         subject: 'Sending Email using Node.js',
         text: 'Nice to meet you！'
     };
 
-    try {
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        });
-        res.send('Send success!!!');
-    }
-    catch (error) {
-        res.send('Send fail!!!');
-    }
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            // console.log(error);
+            res.send('Send success!!!');
+        } else {
+            // console.log('Email sent: ' + info.response);
+            res.send('Send fail!!!');
+        }
+    });
 
 });
 

@@ -28,7 +28,7 @@ node email.js
 2. **收件人要從 req 傳輸**
 ```javascript
     from: mailconfig.Gmail.user, //寄件人
-    to: req.body, //收件人
+    to: req.body.email, //收件人
     subject: '信件標題',
     text: '信件內容'
 ```
